@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spre-unlearner"
+version = "0.1.0"
+description = "SPRE-Unlearner: Structure-Preserving Metric-Guided Representation Editing for Multimodal Concept Unlearning"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.4,<3"]
+
+[project.optional-dependencies]
+qwen = ["transformers==4.51.3", "accelerate", "Pillow"]
+test = ["pytest>=8", "ruff"]
+
+[project.urls]
+Repository = "https://github.com/P3RG-Tao/SPRE-Unlearner"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["tests/reference"]

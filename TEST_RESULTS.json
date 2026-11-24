@@ -1,0 +1,48 @@
+{
+  "method": "SPRE-Unlearner",
+  "generated_at_utc": "2026-11-24T07:33:00.984004+00:00",
+  "python": "3.12.10",
+  "torch": "2.8.0",
+  "device": "cpu",
+  "real_model_tested": false,
+  "gpu_used": false,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "..................                                                       [100%]\n18 passed in 1.24s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "spre_unlearner",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"align_steps\": 3, \"train_steps\": 4, \"checkpoints\": 2, \"device\": \"cpu\", \"real_model_loaded\": false}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ruff",
+        "check",
+        "src",
+        "tests/test_algorithm.py",
+        "tests/test_qwen.py",
+        "tests/test_integrity.py",
+        "tools",
+        "examples"
+      ],
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    }
+  ]
+}

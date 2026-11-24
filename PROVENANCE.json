@@ -1,0 +1,34 @@
+{
+  "protocol": "qwen_replacement_v2_r1",
+  "formal_manifest_sha256": "0b3ee146dbd08c5e5de037afc4fdfb979601c5e7cdd68bc5830c4883cf3d113a",
+  "files": {
+    "replacement.py": {
+      "source": "source/formal_protocols/qwen_replacement_v2_r1/runtime/project/models/post_layer_target_intervention.py",
+      "source_sha256": "589fc42bc1f175d9aa7afc44856dd700d56b929a46e1ed0b722adbd4f0d5ad3f",
+      "symbols": "whole_file",
+      "extracted_sha256": "589fc42bc1f175d9aa7afc44856dd700d56b929a46e1ed0b722adbd4f0d5ad3f"
+    },
+    "alignment.py": {
+      "source": "source/formal_protocols/qwen_replacement_v2_r1/runtime/scripts/diagnose_decoder_atu_e_space.py",
+      "source_sha256": "5ee8633da4ab1031f0c8983ef7d007f657d9a1e58bf73f722704dcb692432a79",
+      "symbols": [
+        "GatedBottleneckE",
+        "pairwise_contrastive_loss",
+        "sample_indices",
+        "structure_loss",
+        "train_predictor"
+      ],
+      "extracted_sha256": "b8f903bcd7d1a7cdea3e2208b9b7d1d862fae2628673a17401916ad22a3b09f5"
+    },
+    "geometry.py": {
+      "source": "source/formal_protocols/qwen_replacement_v2_r1/training_core.py",
+      "source_sha256": "3b76720cce989b0124d1caa99ddbe390a508b205fea6f83e5cc7e56de5dbde9c",
+      "symbols": [
+        "build_retain_coefficient_codebook",
+        "build_target_basis",
+        "tensor_summary"
+      ],
+      "extracted_sha256": "3af0bc966ab531b29aabe01d15210a4bd34ae0e373585f6b230e859b8cec90f6"
+    }
+  }
+}
